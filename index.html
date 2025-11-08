@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kallol Chakrabarti - Sanatan Dharma Research Repository</title>
+    <meta name="description" content="Comprehensive collection of 66+ peer-reviewed papers on Hinduism, Sanatan Dharma, Vedic philosophy, and dharmic governance. Scholarly analysis covering Bhagavad Gita teachings, Vedic frameworks, educational integration of ancient wisdom, spiritual rhetoric, cultural defense, and contemporary applications in ethics, policy, and social welfare.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #ff9933;
+        }
+
+        .featured {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 4px solid #ff9933;
+        }
+
+        .featured h2 {
+            color: #ff6600;
+            margin-bottom: 1rem;
+        }
+
+        .category-section {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #ff6600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #ff9933;
+        }
+
+        .article-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .article-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-left: 4px solid #ff9933;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(255, 153, 51, 0.2);
+        }
+
+        .article-card h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .article-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .article-links a {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .doi-link {
+            background: #ff9933;
+            color: white;
+        }
+
+        .doi-link:hover {
+            background: #ff6600;
+        }
+
+        .pdf-link {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .pdf-link:hover {
+            background: #45a049;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff9933;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .category-title {
+                font-size: 1.4rem;
+            }
+
+            .stats {
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kallol Chakrabarti</h1>
+        <p>Research on Hinduism, Vedic Philosophy & Sanatan Dharma</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">📧 Email</a>
+            <a href="https://orcid.org/your-orcid" target="_blank">ORCID</a>
+            <a href="https://zenodo.org/communities/your-community" target="_blank">Zenodo</a>
+            <a href="https://helixoriginator.github.io/kallol-research-hub/" target="_blank">Governance Research Hub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">66+</div>
+                <div class="stat-label">Published Papers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Research Categories</div>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles by title, topic, or keywords...">
+        </div>
+
+        <div class="featured">
+            <h2>🕉️ About This Repository</h2>
+            <p>Comprehensive collection of 66+ peer-reviewed papers on Hinduism, Sanatan Dharma, Vedic philosophy, and dharmic governance. Scholarly analysis covering Bhagavad Gita teachings, Vedic frameworks, educational integration of ancient wisdom, spiritual rhetoric, cultural defense, and contemporary applications in ethics, policy, and social welfare.</p>
+        </div>
+
+        <!-- Category 1: Dharmic Governance & Policy -->
+        <div class="category-section">
+            <h2 class="category-title">Dharmic Governance & Policy</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>1. Bharat Vikas Mandal: Integrating Vedic Economic Principles with Digital Financial Inclusion</h3>
+                    <p>Economic model integrating Vedic principles with blockchain, AI, and digital technologies for financial inclusion. Introduces Karma Credit System, AI-driven mentorship, and decentralized community hubs.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17378555" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17378555/files/Bharat_Vikas_Mandal_Integrating_Vedic_Economic_Principles_with_Digital_Financial_Inclusion.pdf.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>2. The Karma Index (KI): Measuring Ethical Causality and Ancient Wisdom in Modern Governance</h3>
+                    <p>Quantitative framework for integrating ancient wisdom traditions into contemporary governance policy analysis. Five-stage methodology combining narrative policy analysis with dharmic principles.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17374186" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17374186/files/The-Karma-Index-KI-Novel-Model-Measuring-Ethical-Causality-Ancient-Wisdom-Modern-Governance.pdf.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>12. Vedic Analytical Framework for Governance, Policing, and Education (VAFGPE)</h3>
+                    <p>World's first comprehensive framework applying Vedic ethical principles across multiple state functions. Introduces Dharmic Performance & Incentive System (DPIS) for public servant evaluation.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.16626076" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/16626076/files/Vedic%20Analytical%20Framework%20for%20Governance,%20Policing,%20and%20Education%20(VAFGPE)%202.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>4. Quantum Ethical Uncertainty and Dharma-Driven AI</h3>
+                    <p>Framework integrating Vedic ethical principles (Ṛta, Dharma, Ahimsa) with quantum-enhanced AI for complex policy decisions. Introduces Quantum Ethical Uncertainty (QEU) metric.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17259701" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17259701/files/Quantum%20Ethical%20Uncertainty%20and%20Dharma-Driven%20AI.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: Educational Frameworks -->
+        <div class="category-section">
+            <h2 class="category-title">Educational Frameworks & Ancient Wisdom Integration</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>3. Sanatana Darshana: A Ready Reckoner for Hindu Dharma</h3>
+                    <p>Evidence-based guide to Hindu philosophy for ex-Muslims, atheists, and agnostics. Explores ethics, karma, cosmology, and spiritual inquiry through reason and verifiable sources.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17334809" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17334809/files/Sanatana_Darshana_Ready_Reckoner_for_Ex_Muslims_and_Agnostics_Hindu_Dharma.pdf.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>5. Roots & Wings: A Ready Reckoner for Young Minds</h3>
+                    <p>Novel educational framework integrating ancient Indian wisdom with contemporary values for holistic development among learners aged 10 to 16.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17170006" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17170006/files/Roots%20&%20Wings%20%20A%20Ready%20Reckoner%20for%20Young%20Minds%20%20Integrating%20Ancient%20Indian%20Wisdom%20with%20Modern%20Values%20for%20Holistic%20Child%20Development.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>6. Educational Rhetoric for Digital Natives</h3>
+                    <p>Explores how understanding and employing rhetorical devices can create compelling and memorable e-learning experiences for digital natives.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17129993" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17129993/files/Educational%20Rhetoric%20for%20Digital%20Natives%20%20Shaping%20Instructional%20Content%20with%20Persuasive%20Techniques.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>53. Holistic Character Building through Ancient Teachings</h3>
+                    <p>Reformed educational framework incorporating Bhagavad Gita and Vedic scriptures into school curricula for holistic character development.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14170433" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14170433/files/Holistic%20Character%20Building%20through%20Ancient%20Teachings.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>54. Illuminating Young Minds: Nurturing Ethics Through Upanishadic Teachings</h3>
+                    <p>Integration of Upanishads and Bhagavad Gita into educational curricula via poetry and moral storytelling for character development.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14171526" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14171526/files/Illuminating%20Young%20Minds.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 3: Community Empowerment & Social Welfare -->
+        <div class="category-section">
+            <h2 class="category-title">Community Empowerment & Social Welfare</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>9. Hindu Community Resilience and Empowerment Program (HCREP)</h3>
+                    <p>Integrated framework combining economic security, community protection, and cultural resilience for Hindu families in Uttar Pradesh.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.16755432" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/16755432/files/Hindu%20Community%20Resilience%20and%20Empowerment%20Program%20(HCREP)%20An%20Integrated%20Framework%20for%20Economic%20Security%20and%20Community%20Protection%20in%20Uttar%20Pradesh%202.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>14. Sanatana Dharma Swasthya and Samriddhi Board (SDSSB)</h3>
+                    <p>Proposal for statutory body dedicated to improving health, well-being, and economic prosperity of Sanatana Dharma followers through temple resources and charitable donations.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14902746" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14902746/files/Sanatana%20Dharma%20Swasthya%20and%20Samriddhi%20Board%20(SDSSB)%20A%20Proposal%20for%20Community-Led%20Healthcare%20and%20Economic%20Empowerment.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>24. The Socioeconomic Shield Program (SSP)</h3>
+                    <p>Comprehensive framework for empowering vulnerable communities and strengthening social cohesion through preventive approach to exploitation-driven conversions.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.15860814" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/15860814/files/The%20Socioeconomic%20Shield%20Program%20(SSP)A%20Comprehensive%20Framework%20for%20Empowering%20Vulnerable%20Communities%20and%20Strengthening%20Social%20Cohesion.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>26. The Dharmic Equity and Autonomy Act (DEAA)</h3>
+                    <p>Comprehensive framework for addressing systemic disparities and empowering Hindu communities through economic empowerment, institutional representation, and temple autonomy.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.15899837" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/15899837/files/The%20Dharmic%20Equity%20and%20Autonomy%20Act%20(DEAA)%20A%20Comprehensive%20Framework%20for%20Addressing%20Systemic%20Disparities%20and%20Empowering%20Hindu%20Communities%20in%20India.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>44. Optimizing Resource Allocation of Religious Donations for Social Welfare</h3>
+                    <p>Framework for harnessing temple donations to develop welfare systems for vulnerable individuals, particularly women and children within Hindu community.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14611017" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14611017/files/Optimizing%20Resource%20Allocation%20of%20Religious%20Donations%20for%20Social%20Welfare%20A%20Framework%20for%20Supporting%20Vulnerable%20Hindu%20Communities%20in%20India.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 4: Sacred Text Analysis & Philosophy -->
+        <div class="category-section">
+            <h2 class="category-title">Sacred Text Analysis & Spiritual Philosophy</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>10. The Influence of the Atharva Veda on Ayurveda, Society, and Global Thought</h3>
+                    <p>Examines Atharva Veda's influence on Ayurvedic medicine, cognitive and ethical development, and its synergistic integration with Bhagavad Gita.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14064682" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14064682/files/The%20Influence%20of%20the%20Atharva%20Veda%20on%20Ayurveda.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>20. From Idols to Infinity: Exploring the Indestructibility of the Divine in Bhagavad Gita</h3>
+                    <p>Challenges perception of worship as idol-centric by emphasizing the indestructible and formless essence of the divine in Bhagavad Gita.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14290541" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14290541/files/From%20Idols%20to%20Infinity.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>27. Applying Rhetorical Frameworks to the Teachings of Bhagavad Gita</h3>
+                    <p>Analyzes Bhagavad Gita through Aristotelian rhetoric and modern communication theories, demonstrating its relevance for ethical discourse and leadership.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14286488" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14286488/files/Applying%20Rhetorical%20Frameworks%20to%20the%20Teachings%20of%20the%20Bhagavad%20Gita.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>33. The Enduring Legacy of Sanatana Dharma: A Tapestry of Wisdom and Equality</h3>
+                    <p>Examines profound insights embedded in Bhagavad Gita and Ramayana, highlighting yoga and meditation's relevance and Sanatana Dharma's egalitarian essence.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14219846" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14219846/files/The%20Timeless%20Wisdom%20of%20Yoga,%20Meditation,%20and%20Sanatana%20Dharma.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>55. Beyond Religion: The Concept of Dharma and Its Role in Spirituality</h3>
+                    <p>Explores intricate differences between Dharma and religion, delving into historical, philosophical, and practical dimensions through cultural contexts.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14172399" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14172399/files/The%20Concept%20of%20Dharma%20and%20Its%20Role%20in%20Spirituality%20and%20Society.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>60. The Profound Teachings of Lord Krishna: An Exploration of Spiritual Wisdom</h3>
+                    <p>Elucidates ten fundamental teachings of Krishna and their significance for contemporary humanity, addressing misconceptions about divine love.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14174515" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14174515/files/The%20Profound%20Teachings%20of%20Lord%20Krishna.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 5: Cultural Defense & Historical Narratives -->
+        <div class="category-section">
+            <h2 class="category-title">Cultural Defense & Historical Narratives</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>7. Revitalizing Sanskrit as Catalyst for Cultural, Economic, and Scientific Advancement</h3>
+                    <p>Multi-sectoral strategy to revitalize Sanskrit through integration into modern technological, economic, and educational systems including Sanskrit AI Laboratory.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.17111958" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/17111958/files/Revitalizing%20Sanskrit%20as%20a%20Catalyst%20for%20Cultural,%20Economic,%20and%20Scientific%20Advancement.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>8. Debunking Civilizational Myths: A Comprehensive Ready Reckoner</h3>
+                    <p>Systematically addresses 90 myths across India's constitutional jurisprudence, Sanatana Dharma, and historical narratives with evidence-based research.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.16977623" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/16977623/files/Debunking%20Civilizational%20Myths%20A%20Comprehensive%20Ready%20Reckoner%20on%20India's%20Constitutional,%20Dharmic,%20and%20Historical%20Narratives%20conv.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>11. SANATANA SAMYATA: The Complete Dharma Defense Manual</h3>
+                    <p>World's first comprehensive ready reckoner systematically addressing widespread myths and distortions about Hinduism with scriptural evidence.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.16714489" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/16714489/files/SANATANA%20SAMYATA%20The%20Complete%20Dharma%20Defense%20Manual.pdf?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>35. Sanatana Dharma and Mahakumbh: A Blueprint for Global Stability</h3>
+                    <p>Explores how Sanatana Dharma through Mahakumbh Mela offers sustainable model for addressing global challenges including demographic decline and cultural erosion.</p>
+                    <div class="article-links">
+                        <a href="https://doi.org/10.5281/zenodo.14713963" class="doi-link" target="_blank">View Paper</a>
+                        <a href="https://zenodo.org/records/14713963/files/Sanatana%20Dharma%20and%20Mahakumbh%20A%20Blueprint%20for%20Global%20Stability,%20Cultural%20Revival,%20and%20Future%20Prosperity.docx?download=1" class="pdf-link" target="_blank">Download PDF</a>
+                    </div>
