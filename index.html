@@ -642,4 +642,37 @@
                     <p>Ancient wisdom for contemporary music education.</p>
                     <div class="article-links">
                         <a href="https://doi.org/10.5281/zenodo.14166993" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14166993/files/Revitalizing%20Music%20Through%20the%20Ancient%20Wisdom%20of%20the%20Yajur%20Veda%20edit.docx?download=1" class="pdf-link" target="_blank">PDF</a>
+                        <a href="https://zenodo.org/records/14166993/files/Revitalizing%20Music%20Through%20the%20Ancient%20Wisdom%20of%20the%20Yajur%20Veda%20edit.docx?download=1" class="pdf-link" target="_blank
+                            
+                            
+                            ">PDF</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <p style="text-align:center; font-size:0.9rem; margin:1.5rem 0 0.5rem; color:#666;">
+            Last updated: <span id="last-updated"></span>
+          </p>
+          <p style="text-align:center; font-size:0.85rem; color:#aaa;">© 2025 Kallol Chakrabarti. All rights reserved.</p>
+        </footer>
+
+        <script>
+          document.getElementById('searchInput').addEventListener('input', function() {
+            let query = this.value.toLowerCase();
+            document.querySelectorAll('.article-card').forEach(card => {
+              card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
+            });
+          });
+        </script>
+
+        <script>
+          document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        </script>
+
+      </body>
+    </html>
+                        
