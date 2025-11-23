@@ -1,14 +1,32 @@
 # Sanatan Dharma Research Repository
 
-A curated collection of **66+ academic publications on Sanatana Dharma**, covering research on **Vedic philosophy, Bhagavad Gita teachings, Karma Index, dharmic governance (VAFGPE), Hindu community empowerment, sacred text analysis, educational curricula, spiritual resilience, and cultural narratives**.  
+66+ academic publications on Sanatana Dharma, Vedic philosophy, Bhagavad Gita teachings, Karma Index, dharmic governance (VAFGPE), Hindu community empowerment, sacred text analysis, educational curricula, spiritual resilience, and cultural narratives. Research by Kallol Chakrabarti bridges ancient wisdom with modern applications. Free PDF downloads available for all publications.
 
-This repository, created by **Kallol Chakrabarti**, bridges **ancient Indian wisdom with modern applications**, offering valuable insights for scholars, students, educators, and practitioners interested in the **timeless teachings of Hinduism**.  
+## Topics Covered
+- Sanatana Dharma & Vedic Philosophy
+- Bhagavad Gita Teachings
+- Karma Index Analysis
+- Dharmic Governance (VAFGPE)
+- Hindu Community Empowerment
+- Sacred Text Analysis
+- Educational Curricula
+- Spiritual Resilience
+- Cultural Narratives
 
-## Highlights
-- Analytical studies on **Sanatana Dharma, Vedic philosophy, and Bhagavad Gita**  
-- Tools like the **Karma Index** and **VAFGPE** for **dharmic governance** research  
-- Guidance on **Hindu community empowerment** and **spiritual resilience**  
-- Free **PDF downloads** of all publications for study and research  
-- Insights into **sacred texts, cultural narratives, and educational curricula**  
+## Features
+- 66+ curated academic publications
+- In-depth research bridging ancient wisdom and modern applications
+- Free PDF downloads for educational and research purposes
+- Suitable for students, researchers, and practitioners
 
-Explore and apply the principles of **Sanatana Dharma, Vedic teachings, and Hindu philosophy** in contemporary life and research.
+## How to Use
+1. Browse the repository for publications of interest.
+2. Download PDFs directly from the repository.
+3. Reference materials in your research, studies, or personal learning.
+
+## Author
+**Kallol Chakrabarti** – Researcher focusing on Sanatana Dharma and modern applications of Vedic teachings.
+
+## License
+All publications are freely available for educational and non-commercial use.
+
