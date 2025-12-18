@@ -7,672 +7,230 @@
     <meta name="description" content="Comprehensive collection of 66+ peer-reviewed papers on Hinduism, Sanatan Dharma, Vedic philosophy, and dharmic governance.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%); color: white; padding: 2rem 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2rem; margin-bottom: 0.5rem; font-weight: 700; }
-        header p { font-size: 1.1rem; opacity: 0.95; max-width: 900px; margin: 0 auto; }
-        .contact-links { margin-top: 1rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-        .contact-links a { color: white; text-decoration: none; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 5px; transition: all 0.3s; }
-        .contact-links a:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-        .search-box { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .search-box input { width: 100%; padding: 0.75rem; font-size: 1rem; border: 2px solid #ddd; border-radius: 5px; }
-        .search-box input:focus { outline: none; border-color: #ff9933; }
-        .featured { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 4px solid #ff9933; }
-        .featured h2 { color: #ff6600; margin-bottom: 1rem; }
-        .stats { display: flex; justify-content: center; gap: 3rem; margin: 1.5rem 0; flex-wrap: wrap; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 700; color: #ff9933; }
-        .stat-label { color: #666; font-size: 0.9rem; }
-        .category-section { margin-bottom: 3rem; }
-        .category-title { font-size: 1.8rem; color: #ff6600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #ff9933; }
-        .article-grid { display: grid; gap: 1.5rem; }
-        .article-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s; border-left: 4px solid #ff9933; }
-        .article-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(255, 153, 51, 0.2); }
-        .article-card h3 { color: #333; font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .article-card p { color: #666; margin-bottom: 1rem; font-size: 0.95rem; }
-        .article-links { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .article-links a { padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; font-weight: 500; transition: all 0.3s; font-size: 0.85rem; }
-        .doi-link { background: #ff9933; color: white; }
-        .doi-link:hover { background: #ff6600; }
-        .pdf-link { background: #4CAF50; color: white; }
-        .pdf-link:hover { background: #45a049; }
-        footer { background: #333; color: white; text-align: center; padding: 2rem 1rem; margin-top: 3rem; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e5e7eb;
+            background: #0f172a;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+            color: #f8fafc;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        header h1 {
+            font-size: 2.1rem;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #e0e7ff;
+        }
+
+        .contact-links {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            padding: 0.55rem 1.1rem;
+            background: rgba(255,255,255,0.12);
+            border-radius: 6px;
+            transition: all 0.25s ease;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.22);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: #020617;
+            padding: 1.2rem 1.6rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+        }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .search-box {
+            background: #020617;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+            margin-bottom: 2rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 2px solid #1e293b;
+            background: #020617;
+            color: #e5e7eb;
+        }
+
+        .search-box input::placeholder {
+            color: #64748b;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #38bdf8;
+        }
+
+        .featured {
+            background: #020617;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+            margin-bottom: 2.5rem;
+            border-left: 5px solid #22d3ee;
+        }
+
+        .featured h2 {
+            color: #67e8f9;
+            margin-bottom: 1rem;
+        }
+
+        .featured p {
+            color: #cbd5f5;
+        }
+
+        .category-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #a5b4fc;
+            margin-bottom: 1.6rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #6366f1;
+        }
+
+        .article-grid {
+            display: grid;
+            gap: 1.6rem;
+        }
+
+        .article-card {
+            background: #020617;
+            padding: 1.6rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+            transition: all 0.25s ease;
+            border-left: 5px solid #6366f1;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(99,102,241,0.35);
+        }
+
+        .article-card h3 {
+            color: #f8fafc;
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-card p {
+            color: #cbd5f5;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .article-links {
+            display: flex;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .article-links a {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.25s ease;
+        }
+
+        .doi-link {
+            background: #2563eb;
+            color: #f8fafc;
+        }
+
+        .doi-link:hover {
+            background: #1d4ed8;
+        }
+
+        .pdf-link {
+            background: #16a34a;
+            color: #f8fafc;
+        }
+
+        .pdf-link:hover {
+            background: #15803d;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 3rem;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
         @media (max-width: 768px) {
-            header h1 { font-size: 1.5rem; }
+            header h1 { font-size: 1.6rem; }
             .category-title { font-size: 1.4rem; }
             .stat-number { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Kallol Chakrabarti</h1>
-        <p>Research on Hinduism, Vedic Philosophy & Sanatan Dharma</p>
-        <div class="contact-links">
-            <a href="https://orcid.org/0009-0005-7419-0689" target="_blank">ORCID</a>
-            <a href="https://zenodo.org/communities/kallol-chakrabarti-research" target="_blank">Zenodo</a>
-            <a href="https://helixoriginator.github.io/kallol-research-hub/" target="_blank">Governance Hub</a>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="stats">
-            <div class="stat-item"><div class="stat-number">66</div><div class="stat-label">Published Papers</div></div>
-            <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Research Categories</div></div>
-        </div>
-
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search articles by title, topic, or keywords...">
-        </div>
-
-        <div class="featured">
-            <h2>🕉️ About This Repository</h2>
-            <p>Comprehensive collection of 66 peer-reviewed papers on Hinduism, Sanatan Dharma, Vedic philosophy, and dharmic governance. Scholarly analysis covering Bhagavad Gita teachings, Vedic frameworks, educational integration of ancient wisdom, spiritual rhetoric, cultural defense, and contemporary applications.</p>
-        </div>
-
-        <!-- Category 1 -->
-        <div class="category-section">
-            <h2 class="category-title">Dharmic Governance & Policy</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>1. Bharat Vikas Mandal: Integrating Vedic Economic Principles</h3>
-                    <p>Economic model with Karma Credit System, AI mentorship, and decentralized community hubs.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17378555" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17378555/files/Bharat_Vikas_Mandal_Integrating_Vedic_Economic_Principles_with_Digital_Financial_Inclusion.pdf.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>2. The Karma Index (KI): Measuring Ethical Causality</h3>
-                    <p>Quantitative framework integrating ancient wisdom into governance policy analysis.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17374186" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17374186/files/The-Karma-Index-KI-Novel-Model-Measuring-Ethical-Causality-Ancient-Wisdom-Modern-Governance.pdf.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>4. Quantum Ethical Uncertainty and Dharma-Driven AI</h3>
-                    <p>Vedic principles (Ṛta, Dharma, Ahimsa) with quantum-enhanced AI.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17259701" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17259701/files/Quantum%20Ethical%20Uncertainty%20and%20Dharma-Driven%20AI.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>12. Vedic Analytical Framework (VAFGPE)</h3>
-                    <p>World's first framework applying Vedic ethics across state functions.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.16626076" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/16626076/files/Vedic%20Analytical%20Framework%20for%20Governance,%20Policing,%20and%20Education%20(VAFGPE)%202.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>13. Reimagining Rhetoric: AI, Automation & Ethics</h3>
-                    <p>Enhanced teaching framework with AI-driven media literacy.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14833190" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14833190/files/Reimagining%20Rhetoric%20Integrating%20AI,%20Automation,%20and%20Ethical%20Philosophy%20into%20the%20Rhetoric%20Teaching%20Program%20for%20the%20Digital%20Workforce.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category 2 -->
-        <div class="category-section">
-            <h2 class="category-title">Educational Frameworks</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>3. Sanatana Darshana: Ready Reckoner for Hindu Dharma</h3>
-                    <p>Evidence-based guide for ex-Muslims, atheists, agnostics.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17334809" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17334809/files/Sanatana_Darshana_Ready_Reckoner_for_Ex_Muslims_and_Agnostics_Hindu_Dharma.pdf.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>5. Roots & Wings: Ready Reckoner for Young Minds</h3>
-                    <p>Framework integrating ancient wisdom for ages 10-16.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17170006" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17170006/files/Roots%20&%20Wings%20%20A%20Ready%20Reckoner%20for%20Young%20Minds%20%20Integrating%20Ancient%20Indian%20Wisdom%20with%20Modern%20Values%20for%20Holistic%20Child%20Development.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>6. Educational Rhetoric for Digital Natives</h3>
-                    <p>Rhetorical devices for e-learning experiences.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17129993" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17129993/files/Educational%20Rhetoric%20for%20Digital%20Natives%20%20Shaping%20Instructional%20Content%20with%20Persuasive%20Techniques.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>16. Role of Rhetorical Devices in Hindi Literature</h3>
-                    <p>Impact on student thought processes through literature.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14063555" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14063555/files/The%20Role%20of%20Rhetorical%20Devices%20in%20Hindi%20Literature.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>19. Empowering Young Minds Through Hymns</h3>
-                    <p>Rhetorical devices in hymns for curriculum integration.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14059843" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14059843/files/Empowering%20Young%20Minds%20Through%20Rhetorical%20Devices%20in%20Hymns.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>29. Integrating Swami Vivekananda's Teachings</h3>
-                    <p>Strategy for addressing polarization through education.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14175398" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14175398/files/integrating%20Swami%20Vivekananda's%20Teachings%20in%20Secondary%20Education%20new.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>31. Gurukul and Indian Philosophy for Europe</h3>
-                    <p>Solutions for Western Europe's demographic challenges.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14598097" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14598097/files/Gurukul%20and%20Indian%20Philosophy%20Solutions%20for%20Europe.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>40. Cultural Identity, Unity & Spiritual Wisdom</h3>
-                    <p>Rethinking education for 21st century.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14196352" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14196352/files/Cultural%20Identity,%20Unity,%20and%20Spiritual%20Wisdom.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>45. Integrative Ethical Frameworks for Education</h3>
-                    <p>Bridging Eastern philosophy with modern pedagogy.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14189519" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14189519/files/Integrative%20Ethical%20Frameworks%20for%20Global%20Education.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>53. Holistic Character Building</h3>
-                    <p>Incorporating Gita and Vedic scriptures in schools.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14170433" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14170433/files/Holistic%20Character%20Building%20through%20Ancient%20Teachings.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>54. Illuminating Young Minds</h3>
-                    <p>Upanishadic teachings through poetry and storytelling.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14171526" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14171526/files/Illuminating%20Young%20Minds.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category 3 -->
-        <div class="category-section">
-            <h2 class="category-title">Community Empowerment</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>9. Hindu Community Resilience Program (HCREP)</h3>
-                    <p>Economic security and cultural resilience for UP families.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.16755432" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/16755432/files/Hindu%20Community%20Resilience%20and%20Empowerment%20Program%20(HCREP)%20An%20Integrated%20Framework%20for%20Economic%20Security%20and%20Community%20Protection%20in%20Uttar%20Pradesh%202.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>14. Sanatana Dharma Board (SDSSB)</h3>
-                    <p>Community-led healthcare and economic empowerment.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14902746" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14902746/files/Sanatana%20Dharma%20Swasthya%20and%20Samriddhi%20Board%20(SDSSB)%20A%20Proposal%20for%20Community-Led%20Healthcare%20and%20Economic%20Empowerment.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>15. From Control to Immunity: Dual Shield Model</h3>
-                    <p>Institutional deterrence and economic resilience.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.16305784" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/16305784/files/From%20Control%20to%20Immunity%20%20Integrating%20Institutional%20Deterrence%20and%20Economic%20Shielding%20in%20Vulnerability-Prone%20Zones%20of%20India.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>24. Socioeconomic Shield Program (SSP)</h3>
-                    <p>Empowering vulnerable communities framework.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.15860814" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/15860814/files/The%20Socioeconomic%20Shield%20Program%20(SSP)A%20Comprehensive%20Framework%20for%20Empowering%20Vulnerable%20Communities%20and%20Strengthening%20Social%20Cohesion.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>26. Dharmic Equity and Autonomy Act (DEAA)</h3>
-                    <p>Addressing systemic disparities in Hindu communities.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.15899837" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/15899837/files/The%20Dharmic%20Equity%20and%20Autonomy%20Act%20(DEAA)%20A%20Comprehensive%20Framework%20for%20Addressing%20Systemic%20Disparities%20and%20Empowering%20Hindu%20Communities%20in%20India.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>30. Invisible India: Mapping Marginalization</h3>
-                    <p>Study of welfare access and poverty distribution.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.15841828" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/15841828/files/Invisible%20India%20%20Mapping%20Economic%20Marginalization%20Across%20Social%20Categories%20-%20A%20Comprehensive%20Study%20of%20Welfare%20Access%20and%20Poverty%20Distribution.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>44. Optimizing Religious Donations</h3>
-                    <p>Temple resources for vulnerable community welfare.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14611017" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14611017/files/Optimizing%20Resource%20Allocation%20of%20Religious%20Donations%20for%20Social%20Welfare%20A%20Framework%20for%20Supporting%20Vulnerable%20Hindu%20Communities%20in%20India.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category 5 -->
-        <div class="category-section">
-            <h2 class="category-title">Cultural Defense & Historical Narratives</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>7. Revitalizing Sanskrit</h3>
-                    <p>Catalyst for cultural, economic, scientific advancement.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.17111958" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/17111958/files/Revitalizing%20Sanskrit%20as%20a%20Catalyst%20for%20Cultural,%20Economic,%20and%20Scientific%20Advancement.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>8. Debunking Civilizational Myths</h3>
-                    <p>Ready reckoner on India's constitutional & dharmic narratives.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.16977623" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/16977623/files/Debunking%20Civilizational%20Myths%20A%20Comprehensive%20Ready%20Reckoner%20on%20India's%20Constitutional,%20Dharmic,%20and%20Historical%20Narratives%20conv.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>11. SANATANA SAMYATA: Complete Dharma Defense</h3>
-                    <p>World's first comprehensive defense manual for Hinduism.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.16714489" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/16714489/files/SANATANA%20SAMYATA%20The%20Complete%20Dharma%20Defense%20Manual.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>35. Sanatana Dharma and Mahakumbh</h3>
-                    <p>Blueprint for global stability and cultural revival.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14713963" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14713963/files/Sanatana%20Dharma%20and%20Mahakumbh%20A%20Blueprint%20for%20Global%20Stability,%20Cultural%20Revival,%20and%20Future%20Prosperity.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>36. Revolutionizing Religious Tourism: Yogiji's Role</h3>
-                    <p>Transformative impact on spiritual & economic growth.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14642678" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14642678/files/Revolutionizing%20Religious%20Tourism%20The%20Transformative%20Role%20of%20Yogiji%20in%20Spiritual%20and%20Economic%20Growth.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>37. Myths and Realities of Manusmriti</h3>
-                    <p>Comparative study with ancient legal texts.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14680437" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14680437/files/Myths%20and%20Realities%20of%20Manusmriti.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>41. Nurturing Faith: Respecting Religious Symbolism</h3>
-                    <p>Understanding Hindu worship practices and murti vs devata.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14497810" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14497810/files/Nurturing%20Faith%20Respecting%20Religious%20Symbolism.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category 6 -->
-        <div class="category-section">
-            <h2 class="category-title">Leadership & Contemporary Applications</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>47. Dharma Beyond Borders</h3>
-                    <p>Global framework for ethical leadership in 21st century.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14193533" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14193533/files/Dharma%20Beyond%20Borders.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>48. Philosophical Foundations of Cultural Diplomacy</h3>
-                    <p>Vivekananda and Krishna's lens on international relations.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14194130" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14194130/files/Philosophical%20Foundations%20of%20Cultural%20Diplomacy.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>50. Resilience Through Storytelling</h3>
-                    <p>Comparing timeless wisdom with modern activism.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14195053" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14195053/files/Resilience%20Through%20Storytelling.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>51. Beyond Secularism: Spiritual Philosophy in Policy</h3>
-                    <p>Role in public policy and governance.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14182489" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14182489/files/The%20Role%20of%20Spiritual%20Philosophy%20in%20Public%20Policy%20and%20Governance.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>52. Language of Mediation</h3>
-                    <p>Rhetorical techniques in conflict resolution practices.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14177479" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14177479/files/The%20Language%20of%20Mediation.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>58. Tulsi Gabbard: Advocate for Peace</h3>
-                    <p>Leveraging Vivekananda's philosophy for global unity.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14174166" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14174166/files/Tulsi%20Gabbard.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>59. Leadership Reimagined: Trump, Gita & Christianity</h3>
-                    <p>Comparative analysis of resilience in leadership.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14174186" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14174186/files/Leadership%20Reimagined.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category 7 -->
-        <div class="category-section">
-            <h2 class="category-title">Creative & Storytelling Works</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>38. Invisible Shield: Smart Border Security</h3>
-                    <p>Technology-driven border security solution.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14632981" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14632981/files/Invisible%20Shield%20A%20Smart%20Border%20Security%20Solution.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>39. Lotus and Star: Interactive Animated Tales</h3>
-                    <p>Combining Taoism, Buddhism, Gita & Ramayana for children.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14697346" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14697346/files/The%20Lotus%20and%20the%20Star%20%20Interactive%20Animated%20Tales%20of%20Wisdom.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>40. Legends of Bharatverse: Unlocking the Past</h3>
-                    <p>India's historical heroes as engaging narratives.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14711593" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14711593/files/Legends%20of%20the%20Bharatverse.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>42. Magic of Arjun's Quest: Lessons from Gita</h3>
-                    <p>Transformative journey teaching 25 Gita lessons to children.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14583292" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14583292/files/The%20Magic%20of%20Arjun's%20Quest%20%20Lessons%20from%20the%20Bhagavad%20Gita.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category 4 -->
-        <div class="category-section">
-            <h2 class="category-title">Sacred Texts & Philosophy</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>10. Atharva Veda's Influence on Ayurveda</h3>
-                    <p>Impact on medicine, society, and global thought.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14064682" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14064682/files/The%20Influence%20of%20the%20Atharva%20Veda%20on%20Ayurveda.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>17. Dialogue of Wisdom: Ram and Ravan Exchange</h3>
-                    <p>Reimagined dialogue exploring leadership and dharma.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14054087" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14054087/files/The%20Dialogue%20of%20Wisdom%20and%20Regret.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>18. Power of Rhetoric in Conflict Resolution</h3>
-                    <p>Insights from Bhagavad Gita for peaceful dialogue.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14056253" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14056253/files/The%20Power%20of%20Rhetoric%20in%20Conflict%20Resolution.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>20. From Idols to Infinity</h3>
-                    <p>Indestructibility of divine in Bhagavad Gita.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14290541" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14290541/files/From%20Idols%20to%20Infinity.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>21. Harnessing Rhetoric for Moral Enlightenment</h3>
-                    <p>Role of rhetorical teachers in global education.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14062990" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14062990/files/Role%20of%20Rhetorical%20Teacher.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>22. Tale of Two Kings</h3>
-                    <p>Exploring power of rhetoric and wisdom.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14048736" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14048736/files/The%20Tale%20of%20Two%20Kings%20using%20rhetoric%20devices.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>23. Sacred Wisdom Reimagined</h3>
-                    <p>Universal teachings empowering faith and identity.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14053353" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14053353/files/Constructive%20Rhetoric%20in%20Sacred%20Texts.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>25. Integrating Rhetorical Devices with Meditation</h3>
-                    <p>Holistic approach to youth development.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14054651" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14054651/files/Integrating%20Rhetorical%20Devices%20with%20Meditation%20and%20Yoga.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>27. Applying Rhetorical Frameworks to Gita</h3>
-                    <p>Aristotelian rhetoric and modern communication.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14286488" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14286488/files/Applying%20Rhetorical%20Frameworks%20to%20the%20Teachings%20of%20the%20Bhagavad%20Gita.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>28. Spiritual Rhetoric & Modern Challenges</h3>
-                    <p>Gita, Aristotle, and Sivananda's teachings.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14288032" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14288032/files/Spiritual%20Rhetoric%20and%20Its%20Response%20to%20Modern%20Challenges.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>33. Enduring Legacy of Sanatana Dharma</h3>
-                    <p>Tapestry of wisdom and equality in Gita & Ramayana.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14219846" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14219846/files/The%20Timeless%20Wisdom%20of%20Yoga,%20Meditation,%20and%20Sanatana%20Dharma.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>34. Reviving Spiritual Awareness Through Rig Veda</h3>
-                    <p>Addressing rise of atheism with Vedic philosophy.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14229317" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14229317/files/Reviving%20Spiritual%20Awareness%20Through%20the%20Rig%20Veda.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>43. Beyond Belief: Mantras and Slokas</h3>
-                    <p>Impact on mind and body through sacred sounds.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14600309" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14600309/files/Beyond%20Belief%20How%20Mantras%20and%20Slokas%20Impact%20Mind%20and%20Body.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>46. Spiritual Resilience: Gita & Psychology</h3>
-                    <p>Application to contemporary psychological challenges.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14192373" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14192373/files/Spiritual%20Resilience.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>49. Mantras as Cognitive Instruments</h3>
-                    <p>Scientific examination of spiritual practices.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14194459" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14194459/files/Mantras%20as%20Cognitive%20Instruments.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>55. Beyond Religion: Concept of Dharma</h3>
-                    <p>Role in spirituality and society.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14172399" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14172399/files/The%20Concept%20of%20Dharma%20and%20Its%20Role%20in%20Spirituality%20and%20Society.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>56. Transformative Power of Mantras</h3>
-                    <p>Evidence-based healing with spiritual awakening.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14173781" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14173781/files/The%20Transformative%20Power%20of%20Mantras%20and%20Slokas.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>57. Fostering Resilience Through Gita</h3>
-                    <p>Antidote to ideological extremism tragedies.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14174146" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14174146/files/Fostering%20Resilience%20through%20the%20Bhagavad%20Gita.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>60. Profound Teachings of Lord Krishna</h3>
-                    <p>Exploration of spiritual wisdom for modern times.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14174515" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14174515/files/The%20Profound%20Teachings%20of%20Lord%20Krishna.docx?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>61. Spiritual Rhetoric to Counter Radicalism</h3>
-                    <p>Sacred texts for constructive dialogue.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14019058" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14019058/files/Spiritual%20Rhetoric%20to%20counter%20radicalism.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>62. Sun, Moon & Power of Knowledge: Vedic Poem</h3>
-                    <p>Vedic-inspired poetry for children's education.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14030076" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14030076/files/VEDIC%20POEM%20from%20spiritual%20text.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>63. Constructive Rhetoric in Sacred Texts</h3>
-                    <p>Guide to empower faith and identity.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14031583" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14031583/files/A%20Guide%20to%20Empower%20Faith%20.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>64. Rhetorical Devices in Conflict Resolution</h3>
-                    <p>Fictional scene inspired by Bhagavad Gita.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14036873" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14036873/files/Fight%20scene%20resolution%20through%20Gita.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>65. Hypothetical Dialogue: Ram and Ravan</h3>
-                    <p>Power of words in relationships and conflict.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14041159" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14041159/files/A%20Hypothetical%20Dialogue%20between%20Lord%20Ram%20and%20Ravan.pdf?download=1" class="pdf-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <h3>66. Revitalizing Music Through Yajur Veda</h3>
-                    <p>Ancient wisdom for contemporary music education.</p>
-                    <div class="article-links">
-                        <a href="https://doi.org/10.5281/zenodo.14166993" class="doi-link" target="_blank">View Paper</a>
-                        <a href="https://zenodo.org/records/14166993/files/Revitalizing%20Music%20Through%20the%20Ancient%20Wisdom%20of%20the%20Yajur%20Veda%20edit.docx?download=1" class="pdf-link" target="_blank
-                            
-                            
-                            ">PDF</a>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <footer>
-          <p style="text-align:center; font-size:0.9rem; margin:1.5rem 0 0.5rem; color:#666;">
-            Last updated: <span id="last-updated"></span>
-          </p>
-          <p style="text-align:center; font-size:0.85rem; color:#aaa;">© 2025 Kallol Chakrabarti. All rights reserved.</p>
-        </footer>
-
-        <script>
-          document.getElementById('searchInput').addEventListener('input', function() {
-            let query = this.value.toLowerCase();
-            document.querySelectorAll('.article-card').forEach(card => {
-              card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
-            });
-          });
-        </script>
-
-        <script>
-          document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        </script>
-
-      </body>
-    </html>
-                        
